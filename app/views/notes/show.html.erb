@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<section>
+  <strong>Content:</strong>
+  <p style="width: 400px; padding: 1rem;"><%= @note.content %></p>
+</section>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @note.patient.name %>
+</p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @note.doctor.name %>
+</p>
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>

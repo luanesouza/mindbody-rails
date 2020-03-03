@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1> <%= @patient.name %> </h1>
+<%= link_to 'Add note', new_note_path %>
+<hr />
+<h3> Notes </h3>
+<% if @patient.notes.length > 0 %>
+  <% @patient.notes.map do |note| %>
+
+    <p style="width: 400px; padding: 1rem;">
+      <%= note.content %>
+      <%= link_to 'Edit Note', edit_note_path(note) %>
+    </p>
+
+    <p style="padding: 1rem;"> Dr. <%= note.doctor.name %> </p>
+
+  <% end %>
+
+  <% else %>
+  <h4> No notes yet </h4>
+<% end %>
+
+<hr />
+
+<p>
+  <%= link_to 'Edit Patient Info', edit_patient_path(@patient) %> |
+  <%= link_to 'Back', patients_path %>
+</p>
