@@ -2,4 +2,7 @@
 
 <%= render 'form', note: @note %>
 
-<%= link_to 'Back', patients_path %>
+
+<%= link_to 'View all the patients', patients_path %> |
+
+<%= link_to 'Back', patient_path(@note.patient_id) %>

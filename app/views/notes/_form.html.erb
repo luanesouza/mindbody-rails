@@ -17,10 +17,12 @@
   </div>
 
   <div class="field">
+    <%= form.label 'Patient' %>
     <%= collection_select(:note, :patient_id, Patient.all, :id, :name, prompt: 'Please select the patient') %>
   </div>
 
   <div class="field">
+    <%= form.label 'Doctor' %>
     <%= collection_select(:note, :doctor_id, Doctor.all, :id, :name, prompt: 'Please select the doctor') %>
   </div>
 

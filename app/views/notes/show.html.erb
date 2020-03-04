@@ -15,5 +15,5 @@
   <%= @note.doctor.name %>
 </p>
 
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<%= link_to 'Edit Note', edit_note_path(@note) %> |
+<%= link_to 'Back', patient_path(@note.patient_id) %>
